@@ -90,6 +90,10 @@ strong {
   font-weight: bold;
 }
 
+h1, h2 {
+  color: #000767;
+}
+
 h1 {
   font-size: 21vw;
   font-weight: bold;
