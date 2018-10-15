@@ -149,6 +149,7 @@ img {
   width: 56vmax;
   filter: hue-rotate(335deg);
   border-radius: 50% 0;
+  box-shadow: 0.5rem 0.5rem 1.25rem 0 #0000009e;
 }
 
 @media screen and (min-width: 40rem) {
