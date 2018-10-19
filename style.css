@@ -1,5 +1,5 @@
 :root {
-  --main-bg-color: #FFD6EE;
+  --main-bg-color: #ffd6ea;
   --main-txt-color: blue;
   --main-anchor-color: red;
 }
@@ -153,9 +153,11 @@ img {
   margin-left: -1rem;
   margin-right: 6vw;
   width: 56vmax;
-  filter: hue-rotate(270deg);
+  /* filter: hue-rotate(310deg); */
   border-radius: 50% 0;
   box-shadow: 0.5rem 0.5rem 1.25rem 0 #0000009e;
+  -webkit-animation: filter-animation 8s infinite;
+  animation: filter-animation 8s infinite;
 }
 
 @media screen and (min-width: 40rem) {
@@ -221,4 +223,32 @@ p {
 .speaking__location {
   font-weight: bold;
   font-size: 125%;
+}
+
+@-webkit-keyframes filter-animation {
+  0% {
+    -webkit-filter: hue-rotate(310deg);
+  }
+  
+  50% {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  
+  100% {
+    -webkit-filter: hue-rotate(310deg);
+  }
+}
+
+@keyframes filter-animation {
+  0% {
+    filter: hue-rotate(310deg);
+  }
+  
+  50% {
+    filter: hue-rotate(0deg);
+  }
+  
+  100% {
+    filter: hue-rotate(310deg);
+  }
 }
