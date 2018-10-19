@@ -77,15 +77,29 @@ html {
 
 }
 
+::selection {
+  background: #00ffc5; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #00ffc5; /* Gecko Browsers */
+}
+
 body {
-  background-color: var(--main-bg-color);
+  /* background-color: var(--main-bg-color); */
   position: relative;
   padding: 0 1rem;
   color: var(--main-txt-color);
+  background: var(--main-bg-color) url(images/mrsparkle.png);
+  background-blend-mode: soft-light;
 }
 
 a {
   color: var(--main-anchor-color);
+  background: -moz-linear-gradient(top, rgba(255,255,0,.8) 40%, rgba(125,185,232,0) 100%);
+  background: -webkit-linear-gradient(top, rgba(255,255,0,.8) 40%,rgba(125,185,232,0) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,0,.8) 40%,rgba(125,185,232,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff00', endColorstr='#007db9e8',GradientType=0 );
+  cursor:url(images/cursor-hand.gif), auto;
 }
 
 small {
@@ -147,21 +161,19 @@ img {
   margin-bottom: 3rem;
 }
 
-.about img {
+.about__img {
   z-index: 0;
   margin-top: -11%;
   margin-left: -1rem;
   margin-right: 6vw;
   width: 56vmax;
-  /* filter: hue-rotate(310deg); */
+  filter: hue-rotate(310deg);
   border-radius: 50% 0;
   box-shadow: 0.5rem 0.5rem 1.25rem 0 #0000009e;
-  -webkit-animation: filter-animation 8s infinite;
-  animation: filter-animation 8s infinite;
 }
 
 @media screen and (min-width: 40rem) {
-  .about img {
+  .about__img {
     margin-top: -3.9375rem;
     border-radius: 0 50%;
   }
@@ -170,6 +182,7 @@ img {
 .about__description {
   flex: 1 0 18.75rem;
   margin-top: 10%;
+  background-color: white;
 }
 
 p {
@@ -200,6 +213,8 @@ p {
 .speaking {
   max-width: 62.5rem;
   margin: 0 auto;
+  border-top: 0.25rem dashed var(--main-txt-color);
+  padding-top: 1.5rem;
 }
 
 .speaking__name {
@@ -220,35 +235,11 @@ p {
   margin-top: 1rem;
 }
 
+.speaking li {
+  background-color: #fff;
+}
+
 .speaking__location {
   font-weight: bold;
   font-size: 125%;
-}
-
-@-webkit-keyframes filter-animation {
-  0% {
-    -webkit-filter: hue-rotate(310deg);
-  }
-  
-  50% {
-    -webkit-filter: hue-rotate(0deg);
-  }
-  
-  100% {
-    -webkit-filter: hue-rotate(310deg);
-  }
-}
-
-@keyframes filter-animation {
-  0% {
-    filter: hue-rotate(310deg);
-  }
-  
-  50% {
-    filter: hue-rotate(0deg);
-  }
-  
-  100% {
-    filter: hue-rotate(310deg);
-  }
 }
