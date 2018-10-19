@@ -85,12 +85,16 @@ html {
 }
 
 body {
-  /* background-color: var(--main-bg-color); */
   position: relative;
   padding: 0 1rem;
   color: var(--main-txt-color);
-  background: var(--main-bg-color) url(images/mrsparkle.png);
-  background-blend-mode: soft-light;
+  /* background-color: var(--main-bg-color); */
+  /* background-blend-mode: soft-light; */
+  background: var(--main-bg-color) url('images/deer.jpg');
+  background-blend-mode: luminosity;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left bottom;
 }
 
 a {
@@ -182,7 +186,8 @@ img {
 .about__description {
   flex: 1 0 18.75rem;
   margin-top: 10%;
-  background-color: white;
+  /* background-color: white; */
+  background-color: rgba(255,255,255,.7);
 }
 
 p {
@@ -236,7 +241,8 @@ p {
 }
 
 .speaking li {
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: rgba(255,255,255,.7);
 }
 
 .speaking__location {
