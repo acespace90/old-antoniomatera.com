@@ -1,7 +1,7 @@
 :root {
-  --main-bg-color: #ffd6ea;
+  --main-bg-color: white;
   --main-txt-color: blue;
-  --main-anchor-color: red;
+  --main-anchor-color: #FF5DFE;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -88,13 +88,13 @@ body {
   position: relative;
   padding: 0 1rem;
   color: var(--main-txt-color);
-  /* background-color: var(--main-bg-color); */
+  background-color: var(--main-bg-color);
   /* background-blend-mode: soft-light; */
-  background: var(--main-bg-color) url('images/deer.jpg');
-  background-blend-mode: luminosity;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: left bottom;
+  /* background: var(--main-bg-color) url('images/deer.jpg'); */
+  /* background-blend-mode: luminosity; */
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  /* background-position: left bottom; */
 }
 
 a {
@@ -142,6 +142,13 @@ h2 {
   margin-bottom: 2rem;
 }
 
+  @supports (display: grid) {
+    h1, h2 {
+      -webkit-text-stroke: 0.125rem blue;
+      color: #fff;
+    }
+  }
+
 h2 sup {
   font-size: 40%;
   vertical-align: top;
@@ -186,8 +193,6 @@ img {
 .about__description {
   flex: 1 0 18.75rem;
   margin-top: 10%;
-  /* background-color: white; */
-  background-color: rgba(255,255,255,.7);
 }
 
 p {
