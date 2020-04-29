@@ -2,6 +2,16 @@
   --main-bg-color: white;
   --main-txt-color: blue;
   --main-anchor-color: #FF5DFE;
+  --h1-h1-color: white;
+  --speakingItem-bg-color: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-bg-color: #32393d;
+    --main-txt-color: #bdbdbd;
+    --h1-h1-color: #00ffc5;
+  }
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -9,48 +19,135 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
+
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Custom style */
@@ -65,23 +162,22 @@ html {
   font-family: 'Amiri', serif;
 }
 
-* {
-
-  &,
-  &:before,
-  &:after {
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
-    box-sizing: inherit;
-  }
-
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 ::selection {
-  background: #00ffc5; /* WebKit/Blink Browsers */
+  background: #00ffc5;
+  /* WebKit/Blink Browsers */
 }
+
 ::-moz-selection {
-  background: #00ffc5; /* Gecko Browsers */
+  background: #00ffc5;
+  /* Gecko Browsers */
 }
 
 body {
@@ -99,11 +195,17 @@ body {
 
 a {
   color: var(--main-anchor-color);
-  background: -moz-linear-gradient(top, rgba(255,255,0,.8) 40%, rgba(125,185,232,0) 100%);
-  background: -webkit-linear-gradient(top, rgba(255,255,0,.8) 40%,rgba(125,185,232,0) 100%);
-  background: linear-gradient(to bottom, rgba(255,255,0,.8) 40%,rgba(125,185,232,0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff00', endColorstr='#007db9e8',GradientType=0 );
-  cursor:url(images/cursor-hand.gif), auto;
+  background: -moz-linear-gradient(top, rgba(255, 255, 0, .8) 40%, rgba(125, 185, 232, 0) 100%);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 0, .8) 40%, rgba(125, 185, 232, 0) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 0, .8) 40%, rgba(125, 185, 232, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff00', endColorstr='#007db9e8', GradientType=0);
+  cursor: url(images/cursor-hand.gif), auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  a {
+    background: none;
+  }
 }
 
 small {
@@ -114,8 +216,9 @@ strong {
   font-weight: bold;
 }
 
-h1, h2 {
-  color: var(--main-txt-color);
+h1,
+h2 {
+  color: var(--h1-h1-color);
 }
 
 h1 {
@@ -129,11 +232,11 @@ h1 {
   text-shadow: 0.187rem 0.187rem #00ffc5, 0.375rem 0.375rem var(--main-anchor-color);
 }
 
-  @media screen and (min-width: 40rem) {
-    h1 {
-      font-size: 825%;
-    }
+@media screen and (min-width: 40rem) {
+  h1 {
+    font-size: 825%;
   }
+}
 
 h2 {
   font-size: 10vw;
@@ -142,23 +245,25 @@ h2 {
   margin-bottom: 2rem;
 }
 
-  @supports (display: grid) {
-    h1, h2 {
-      -webkit-text-stroke: 0.125rem blue;
-      color: #fff;
-    }
+@supports (display: grid) {
+
+  h1,
+  h2 {
+    -webkit-text-stroke: 0.125rem blue;
+    color: var(--h1-h1-color);
   }
+}
 
 h2 sup {
   font-size: 40%;
   vertical-align: top;
 }
 
-  @media screen and (min-width: 40rem) {
-    h2 {
-      font-size: 415%;
-    }
+@media screen and (min-width: 40rem) {
+  h2 {
+    font-size: 415%;
   }
+}
 
 img {
   max-width: 100%;
@@ -183,6 +288,12 @@ img {
   box-shadow: 0.5rem 0.5rem 1.25rem 0 #0000009e;
 }
 
+@media (prefers-color-scheme: dark) {
+  .about__img {
+    filter: hue-rotate(220deg);
+  }
+}
+
 @media screen and (min-width: 40rem) {
   .about__img {
     margin-top: -3.9375rem;
@@ -201,11 +312,11 @@ p {
   margin-bottom: 2.75rem;
 }
 
-  @media screen and (min-width: 48rem) {
-    p {
-      font-size: 200%;
-    }
+@media screen and (min-width: 48rem) {
+  p {
+    font-size: 200%;
   }
+}
 
 .about li {
   display: inline-block;
@@ -214,11 +325,11 @@ p {
   font-size: 150%;
 }
 
-  @media screen and (min-width: 48rem) {
-    .about li {
-      font-size: 200%;
-    }
+@media screen and (min-width: 48rem) {
+  .about li {
+    font-size: 200%;
   }
+}
 
 .speaking {
   max-width: 62.5rem;
@@ -234,11 +345,11 @@ p {
   margin-bottom: .5rem;
 }
 
-  @media screen and (min-width: 48rem) {
-    .speaking__name {
-      font-size: 200%;
-    }
+@media screen and (min-width: 48rem) {
+  .speaking__name {
+    font-size: 200%;
   }
+}
 
 .speaking p {
   font-size: 130%;
@@ -246,8 +357,7 @@ p {
 }
 
 .speaking li {
-  /* background-color: #fff; */
-  background-color: rgba(255,255,255,.7);
+  background-color: var(--speakingItem-bg-color);
 }
 
 .speaking__location {
