@@ -8,9 +8,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --main-bg-color: #32393d;
-    --main-txt-color: #bdbdbd;
-    --h1-h1-color: #00ffc5;
+    --main-bg-color: #201c1c;
+    --main-txt-color: #eee2da;
   }
 }
 
@@ -345,4 +344,11 @@ body {
   .c-get-in-touch__list-anchor {
     font-size: 5rem;
   }
+}
+
+.c-iubenda {
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
