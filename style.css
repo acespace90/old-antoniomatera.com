@@ -254,7 +254,6 @@ body {
   font-weight: var(--fw-semibold);
   font-size: 2rem;
   line-height: 120%;
-  margin-top: 2rem;
 }
 
 @media only screen and (min-width: 1024px) {
